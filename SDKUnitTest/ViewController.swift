@@ -15,11 +15,36 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
     }
 
     @IBAction func onTapOpen(_ sender: Any) {
-        
+        resetLabel()
+        open(urlString: urlField.text)
+    }
+    
+    internal func open(urlString: String?) {
+        guard let urlString = urlString,
+            let url = URL(string: urlString) else {
+                setFailed()
+                return
+        }
+
+        if UIApplication.shared.canOpenURL(url) {
+            // 開けるなら開く
+            UIApplication.shared.open(url, options: [:],
+                                      completionHandler: nil)
+        } else {
+            // 開けなかったのでLabelに書いておく
+            setFailed()
+        }
+    }
+    
+    internal func resetLabel() {
+        failedLabel.text = ""
+    }
+    
+    internal func setFailed() {
+        failedLabel.text = "開けないよっ"
     }
     
 }
