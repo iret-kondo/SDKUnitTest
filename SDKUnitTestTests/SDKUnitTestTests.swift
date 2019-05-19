@@ -10,25 +10,31 @@ import XCTest
 @testable import SDKUnitTest
 
 class SDKUnitTestTests: XCTestCase {
+    private let viewController = ViewController()
+    private let urlField = UITextField()
+    private let failedLabel = UILabel()
 
     override func setUp() {
-        // Put setup code here. This method is called before the invocation of each test method in the class.
+        viewController.urlField = urlField
+        viewController.failedLabel = failedLabel
     }
 
     override func tearDown() {
         // Put teardown code here. This method is called after the invocation of each test method in the class.
     }
+    
+    func testOpenUrl() {
+        urlField.text = "https://www.google.co.jp"
+        viewController.onTapOpen(self)
 
-    func testExample() {
-        // This is an example of a functional test case.
-        // Use XCTAssert and related functions to verify your tests produce the correct results.
+        XCTAssertEqual(failedLabel.text, "")
     }
-
-    func testPerformanceExample() {
-        // This is an example of a performance test case.
-        self.measure {
-            // Put the code you want to measure the time of here.
-        }
+    
+    func testOpenUrlFailed() {
+        urlField.text = "aaaa"
+        viewController.onTapOpen(self)
+        
+        XCTAssertEqual(failedLabel.text, "開けないよっ")
     }
 
 }
