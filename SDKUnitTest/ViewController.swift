@@ -22,6 +22,7 @@ class ViewController: UIViewController {
         open(urlString: urlField.text)
     }
     
+    // presenterにあるべき処理だが今回はあえてFatViewControllerにする
     internal func open(urlString: String?) {
         guard let urlString = urlString,
             let url = URL(string: urlString) else {

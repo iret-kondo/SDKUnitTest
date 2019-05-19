@@ -47,17 +47,41 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="↓にURLを入力" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="810-FX-TG7">
+                                <rect key="frame" x="20" y="289" width="116" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="116" id="0VW-th-s2m"/>
+                                    <constraint firstAttribute="height" constant="21" id="taZ-K2-V2J"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="OpenでURLを開くor ↓にエラーを表示" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="331-rP-BLe">
+                                <rect key="frame" x="20" y="363" width="283" height="20"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="20" id="Dgt-xj-oIW"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="b8u-HO-W1x" secondAttribute="trailing" constant="24" id="16q-Rp-pbe"/>
                             <constraint firstItem="8pt-au-nIf" firstAttribute="top" secondItem="b8u-HO-W1x" secondAttribute="bottom" constant="10" id="96H-oC-6vR"/>
+                            <constraint firstItem="So7-gG-3Wn" firstAttribute="top" secondItem="810-FX-TG7" secondAttribute="bottom" constant="8.5" id="AAN-3H-M4Q"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="So7-gG-3Wn" secondAttribute="trailing" constant="20" id="ByI-Ug-VEL"/>
+                            <constraint firstItem="b8u-HO-W1x" firstAttribute="leading" secondItem="331-rP-BLe" secondAttribute="trailing" constant="10" id="Nbc-88-yh9"/>
                             <constraint firstItem="8pt-au-nIf" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="Oof-fb-22B"/>
                             <constraint firstItem="So7-gG-3Wn" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="PJC-pZ-h3F"/>
                             <constraint firstItem="So7-gG-3Wn" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="SaU-7k-oLO"/>
+                            <constraint firstItem="331-rP-BLe" firstAttribute="top" secondItem="So7-gG-3Wn" secondAttribute="bottom" constant="14.5" id="dkE-9l-LjY"/>
+                            <constraint firstItem="810-FX-TG7" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="h7S-LH-Kqu"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="8pt-au-nIf" secondAttribute="trailing" constant="20" id="mbC-8P-yVf"/>
                             <constraint firstItem="b8u-HO-W1x" firstAttribute="top" secondItem="So7-gG-3Wn" secondAttribute="bottom" constant="10" id="sXD-ZB-Msz"/>
+                            <constraint firstItem="331-rP-BLe" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="yTB-7q-Hbj"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
