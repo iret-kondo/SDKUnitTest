@@ -14,6 +14,8 @@
 		9E36A294229135F400766EB8 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9E36A292229135F400766EB8 /* LaunchScreen.storyboard */; };
 		9E36A29F229135F500766EB8 /* SDKUnitTestTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E36A29E229135F500766EB8 /* SDKUnitTestTests.swift */; };
 		9E36A2AA229135F500766EB8 /* SDKUnitTestUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E36A2A9229135F500766EB8 /* SDKUnitTestUITests.swift */; };
+		9E36A2BA2291478F00766EB8 /* UIApplicationProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E36A2B92291478F00766EB8 /* UIApplicationProtocol.swift */; };
+		9E36A2BD2291495300766EB8 /* UIApplicationMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E36A2BC2291495300766EB8 /* UIApplicationMock.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +49,8 @@
 		9E36A2A5229135F500766EB8 /* SDKUnitTestUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SDKUnitTestUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		9E36A2A9229135F500766EB8 /* SDKUnitTestUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SDKUnitTestUITests.swift; sourceTree = "<group>"; };
 		9E36A2AB229135F500766EB8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9E36A2B92291478F00766EB8 /* UIApplicationProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIApplicationProtocol.swift; sourceTree = "<group>"; };
+		9E36A2BC2291495300766EB8 /* UIApplicationMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIApplicationMock.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -103,6 +107,7 @@
 				9E36A290229135F400766EB8 /* Assets.xcassets */,
 				9E36A292229135F400766EB8 /* LaunchScreen.storyboard */,
 				9E36A295229135F400766EB8 /* Info.plist */,
+				9E36A2B92291478F00766EB8 /* UIApplicationProtocol.swift */,
 			);
 			path = SDKUnitTest;
 			sourceTree = "<group>";
@@ -110,6 +115,7 @@
 		9E36A29D229135F500766EB8 /* SDKUnitTestTests */ = {
 			isa = PBXGroup;
 			children = (
+				9E36A2BB2291493C00766EB8 /* Mock */,
 				9E36A29E229135F500766EB8 /* SDKUnitTestTests.swift */,
 				9E36A2A0229135F500766EB8 /* Info.plist */,
 			);
@@ -123,6 +129,14 @@
 				9E36A2AB229135F500766EB8 /* Info.plist */,
 			);
 			path = SDKUnitTestUITests;
+			sourceTree = "<group>";
+		};
+		9E36A2BB2291493C00766EB8 /* Mock */ = {
+			isa = PBXGroup;
+			children = (
+				9E36A2BC2291495300766EB8 /* UIApplicationMock.swift */,
+			);
+			path = Mock;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -257,6 +271,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				9E36A28C229135F300766EB8 /* ViewController.swift in Sources */,
+				9E36A2BA2291478F00766EB8 /* UIApplicationProtocol.swift in Sources */,
 				9E36A28A229135F300766EB8 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -265,6 +280,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9E36A2BD2291495300766EB8 /* UIApplicationMock.swift in Sources */,
 				9E36A29F229135F500766EB8 /* SDKUnitTestTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -23,16 +23,16 @@ class ViewController: UIViewController {
     }
     
     // presenterにあるべき処理だが今回はあえてFatViewControllerにする
-    internal func open(urlString: String?) {
+    internal func open(urlString: String?, application: UIApplicationProtocol = UIApplication.shared) {
         guard let urlString = urlString,
             let url = URL(string: urlString) else {
                 setFailed()
                 return
         }
 
-        if UIApplication.shared.canOpenURL(url) {
+        if application.canOpenURL(url) {
             // 開けるなら開く
-            UIApplication.shared.open(url, options: [:],
+            application.open(url, options: [:],
                                       completionHandler: nil)
         } else {
             // 開けなかったのでLabelに書いておく

@@ -24,17 +24,30 @@ class SDKUnitTestTests: XCTestCase {
     }
     
     func testOpenUrl() {
-        urlField.text = "https://www.google.co.jp"
-        viewController.onTapOpen(self)
-
-        XCTAssertEqual(failedLabel.text, "")
+        let mock = UIApplicationMock()
+        mock.stubbedCanOpenURLResult = true
+        viewController.open(urlString: "hogehoge", application: mock)
+        
+        XCTAssertTrue(mock.invokedCanOpenURL)
+        XCTAssertTrue(mock.invokedOpen)
     }
     
     func testOpenUrlFailed() {
-        urlField.text = "aaaa"
-        viewController.onTapOpen(self)
+        let mock = UIApplicationMock()
+        mock.stubbedCanOpenURLResult = false
+        viewController.open(urlString: "hogehoge", application: mock)
+
+        XCTAssertTrue(mock.invokedCanOpenURL)
+        XCTAssertFalse(mock.invokedOpen)
+    }
+    
+    func testOpenUrlEmptyString() {
+        let mock = UIApplicationMock()
+        mock.stubbedCanOpenURLResult = false
+        viewController.open(urlString: "", application: mock)
         
-        XCTAssertEqual(failedLabel.text, "開けないよっ")
+        XCTAssertFalse(mock.invokedCanOpenURL)
+        XCTAssertFalse(mock.invokedOpen)
     }
 
 }
